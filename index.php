@@ -1,12 +1,12 @@
 <?php
 $servername = "localhost";
-$username = "Dave";
-$password = "Dave";
+$username = "root";
+$password = "";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 
-$db = new PDO('mysql:host=localhost;dbname=Dave', 'Dave', 'Dave');
+$db = new PDO('mysql:host=localhost;dbname=4woensdag', 'root', '');
 ?>
 
 
@@ -22,7 +22,7 @@ $db = new PDO('mysql:host=localhost;dbname=Dave', 'Dave', 'Dave');
     <div class="titel">Project
     <br>
         <?php
-        //Dropdown compecompetencies names
+        //Dropdown Project names
         $query = $db->query("SELECT name FROM projects");
         echo '<select name="Competenties">';
         while ($row1 = $query->fetch(PDO::FETCH_ASSOC))
@@ -37,7 +37,7 @@ $db = new PDO('mysql:host=localhost;dbname=Dave', 'Dave', 'Dave');
     <div class="titel">Competentie
         <br>
         <?php
-        //Dropdown compecompetencies names
+        //Dropdown Competentie names
         $query = $db->query("SELECT name FROM competencies");
         echo '<select name="Competenties">';
         while ($row2 = $query->fetch(PDO::FETCH_ASSOC))
@@ -53,7 +53,7 @@ $db = new PDO('mysql:host=localhost;dbname=Dave', 'Dave', 'Dave');
     <div class="titel">Student
     <br>
         <?php
-        //Dropdown compecompetencies names
+        //Dropdown Student names
         $query = $db->query("SELECT name FROM students");
         echo '<select name="Competenties">';
         while ($row3 = $query->fetch(PDO::FETCH_ASSOC))
