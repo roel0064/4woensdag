@@ -15,12 +15,15 @@
     font-family: Arial;
     font-size: 18px;
 }
-select {
+select{
     font-family: Arial;
     font-size: 18px;
     -webkit-border-radius: 5px;
     -webkit-box-shadow: 0 2px 4px;
-
+    float: none;
+}
+.col-sm-10{
+    float: none;
 }
 button{
     padding: 5px;
