@@ -58,8 +58,8 @@ foreach ($mergedData as $data) {
 
 <body>
 <div>
-<img class="img" src="img/hzlogo.png">
-<h1>Competentiemanager</h1>
+<img class="img header" src="img/hzlogo.png">
+<h1 class="header">Competentiemanager</h1>
 </div>
 <br>
 <div class="dropdowns">
