@@ -81,15 +81,7 @@ foreach ($mergedData as $data) {
         <?php
         endforeach;
         ?>
-        <option disabled>
 
-        </option>
-        <option>
-            Voeg toe
-        </option>
-        <option>
-            Wijzig
-        </option>
         </select> 
         <a href="#openModal1"><button>Voeg project toe <span class="glyphicon glyphicon-plus"></span></button></a>
 
@@ -155,15 +147,6 @@ foreach ($mergedData as $data) {
         <?php
         endforeach;
         ?>
-            <option disabled>
-
-            </option>
-            <option>
-                Voeg toe
-            </option>
-            <option>
-                Wijzig
-            </option>
         </select> 
         <a href="#openModal3"><button>Voeg competentie toe <span class="glyphicon glyphicon-plus"></button></a>
 
@@ -236,15 +219,7 @@ foreach ($mergedData as $data) {
         <?php
         endforeach;
         ?>
-        <option disabled>
 
-        </option>
-        <option>
-            Voeg toe
-        </option>
-        <option>
-            Wijzig
-        </option>
         </select> 
         <a href="#openModal5"><button>Voeg student toe <span class="glyphicon glyphicon-plus"></button></a>
 
