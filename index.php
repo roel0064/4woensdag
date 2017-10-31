@@ -58,14 +58,14 @@ foreach ($mergedData as $data) {
 
 <body>
 <div>
-<img class="img header" src="img/hzlogo.png">
-<h1 class="header">Competentiemanager</h1>
+<img class="img" src="img/hzlogo.png">
+<h1>Competentiemanager</h1>
 </div>
 <br>
 <div class="dropdowns">
     <div class="titel col-sm-4">Project
     <br>
-    <select class="col-sm-10" id="project-select col-sm-2">
+    <select class="col-sm-10" id="project-select">
     <option value="0">
     All
     </option>
@@ -95,7 +95,7 @@ foreach ($mergedData as $data) {
 
     <div class="titel col-sm-4">Competentie
         <br>
-        <select class="col-sm-10" id="competentie-select col-sm-2">
+        <select class="col-sm-10" id="competentie-select">
         <option value="0">
     All
     </option>
@@ -126,7 +126,7 @@ foreach ($mergedData as $data) {
 
     <div class="titel col-sm-4">Student
     <br>
-    <select class="col-sm-10" id="student-select col-sm-2">
+    <select class="col-sm-10" id="student-select">
     <option value="0">
     All
     </option>
@@ -181,8 +181,83 @@ foreach ($mergedData as $data) {
         studentid = $(this).val();
         redirect();
     });
-
-
     </script>
+
+</div>
+ 
+<a href="#openModal1">Voeg project toe</a>
+
+<div id="openModal1" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Modal Box 1</h2>
+    <form>
+    Projectnaam:<br>
+    <input type="text" name="Projectnaam"><br>
+    Projectinformatie:<br>
+    <input type="text" name="Projectinformatie">
+  </form>
+</div>
+</div>
+
+
+<a href="#openModal2">verwijder project</a>
+
+  <div id="openModal2" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>verwijder project</h2>
+    <p><strong>Box 2</strong></p>
+    <p>yadda yadda</p>
+</div>
+</div>
+
+
+<a href="#openModal3">Voeg competentie toe</a>
+
+  <div id="openModal3" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Voeg competentie toe</h2>
+    <p><strong>Box 3</strong></p>
+    <p>yadda yadda</p>
+</div>
+</div>
+
+<a href="#openModal4">Verwijder competentie</a>
+
+  <div id="openModal4" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Verwijder competentie</h2>
+    <p><strong>Box 4</strong></p>
+    <p>yadda yadda</p>
+</div>
+</div>
+
+<a href="#openModal5">Voeg student toe</a>
+
+  <div id="openModal5" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>>Voeg student toe</h2>
+    <p><strong>Box 5</strong></p>
+    <p>yadda yadda</p>
+</div>
+</div>
+
+<a href="#openModal6">Verwijder Student</a>
+
+  <div id="openModal6" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Verwijder Student</h2>
+    <p><strong>Box 6</strong></p>
+    <p>yadda yadda</p>
+</div>
+</div>
+
+
+
 </body>
 </html>
