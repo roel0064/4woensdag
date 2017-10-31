@@ -49,14 +49,23 @@ foreach ($mergedData as $data) {
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="titel">Project
+<div>
+<img class="img" src="img/hzlogo.png">
+<h1>Competentiemanager</h1>
+</div>
+<br>
+<div class="dropdowns">
+    <div class="titel col-sm-4">Project
     <br>
-    <select id="project-select">
+    <select class="col-sm-10" id="project-select col-sm-2">
     <option value="0">
     All
     </option>
@@ -71,13 +80,22 @@ foreach ($mergedData as $data) {
         <?php
         endforeach;
         ?>
+        <option disabled>
+
+        </option>
+        <option>
+            Voeg toe
+        </option>
+        <option>
+            Wijzig
+        </option>
         </select>        
     </div>
 
 
-    <div class="titel">Competentie
+    <div class="titel col-sm-4">Competentie
         <br>
-        <select id="competentie-select">
+        <select class="col-sm-10" id="competentie-select col-sm-2">
         <option value="0">
     All
     </option>
@@ -92,14 +110,23 @@ foreach ($mergedData as $data) {
         <?php
         endforeach;
         ?>
+            <option disabled>
+
+            </option>
+            <option>
+                Voeg toe
+            </option>
+            <option>
+                Wijzig
+            </option>
         </select>     
     </div>
 
 
 
-    <div class="titel">Student
+    <div class="titel col-sm-4">Student
     <br>
-    <select id="student-select">
+    <select class="col-sm-10" id="student-select col-sm-2">
     <option value="0">
     All
     </option>
@@ -114,8 +141,18 @@ foreach ($mergedData as $data) {
         <?php
         endforeach;
         ?>
+        <option disabled>
+
+        </option>
+        <option>
+            Voeg toe
+        </option>
+        <option>
+            Wijzig
+        </option>
         </select>   
     </div>
+</div>
     <script type="text/javascript" src="script.js"></script>
     
     <script>
