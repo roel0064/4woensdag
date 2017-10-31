@@ -111,3 +111,7 @@ button{
 }
 
 .close:hover { background: #00d9ff; }
+
+.fix_model{
+    float: none;
+}

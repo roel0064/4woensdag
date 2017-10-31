@@ -91,15 +91,19 @@ foreach ($mergedData as $data) {
     <a href="#close" title="Close" class="close">X</a>
     <h2>Voeg project toe</h2>
     <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-ok"></span> Voeg toe 
+          Voeg toe <span class="glyphicon glyphicon-ok"></span>
         </button>
-    <form>
+    <form class="pull-left">
     Projectnaam:<br>
-    <input type="text" name="Projectnaam"><br>
+    <input  type="text" name="Projectnaam"><br>
     Projectinformatie:<br>
     <input type="text" name="Projectinformatie">
   </form>
- 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
 </div>
 </div>
 
@@ -111,7 +115,7 @@ foreach ($mergedData as $data) {
     <a href="#close" title="Close" class="close">X</a>
     <h2>Verwijder Project</h2>
     <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-trash"></span> Delete 
+          Delete <span class="glyphicon glyphicon-trash"></span>
         </button>
             <?php
             $query = $db->query("SELECT name FROM projects");
@@ -155,13 +159,14 @@ foreach ($mergedData as $data) {
     <a href="#close" title="Close" class="close">X</a>
     <h2>Voeg competentie toe</h2>
     <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-ok"></span> Voeg toe 
+          Voeg toe <span class="glyphicon glyphicon-ok"></span>
         </button>
-    <form>
+    <form class="pull-left">
     Naam competentie:<br>
     <input type="text" name="Naam competentie"><br>
   </form>
-  <p>Voeg toe aan Project</p>
+  <p class="pull-left">Voeg toe aan Project</p>
+  <div class="pull-left">
   <?php
             $query = $db->query("SELECT name FROM projects");
             echo '<select name="Projecten">';
@@ -171,9 +176,16 @@ foreach ($mergedData as $data) {
             }
             echo '</select>';
             ?> 
+            </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+</div>
 
-</div>
-</div>
 
 <a href="#openModal4"><button>Verwijder competentie <span class="glyphicon glyphicon-trash"></span></button></a>
 
@@ -182,8 +194,12 @@ foreach ($mergedData as $data) {
     <a href="#close" title="Close" class="close">X</a>
     <h2>Verwijder competentie</h2>
     <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-trash"></span> Delete 
+          Delete <span class="glyphicon glyphicon-trash"></span>
         </button>
+        <div class="pull-center">
+            <br>
+            <br>
+            <br>
             <?php
             $query = $db->query("SELECT name FROM competencies");
             echo '<select name="Competenties">';
@@ -193,6 +209,7 @@ foreach ($mergedData as $data) {
             }
             echo '</select>';
             ?>
+            </div>
             <br>
             <br>
 
@@ -228,7 +245,7 @@ foreach ($mergedData as $data) {
     <a href="#close" title="Close" class="close">X</a>
     <h2>Voeg student toe</h2>
     <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-ok"></span> Voeg toe 
+          Voeg toe <span class="glyphicon glyphicon-ok"></span>
         </button>
     <form>
     Naam Student:<br>
@@ -244,7 +261,7 @@ foreach ($mergedData as $data) {
     <a href="#close" title="Close" class="close">X</a>
     <h2>Verwijder Student</h2>
     <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-trash" ></span> Delete 
+          Delete <span class="glyphicon glyphicon-trash" ></span>
         </button>
             <?php
             $query = $db->query("SELECT name FROM students");
