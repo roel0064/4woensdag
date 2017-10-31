@@ -90,7 +90,51 @@ foreach ($mergedData as $data) {
         <option>
             Wijzig
         </option>
-        </select>        
+        </select> 
+        <a href="#openModal1"><button>Voeg project toe <span class="glyphicon glyphicon-plus"></span></button></a>
+
+<div id="openModal1" class="modalDialog">
+<div>
+
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Voeg project toe</h2>
+    <button type="button" class="btn btn-primary btn-lg pull-right">
+          <span class="glyphicon glyphicon-ok"></span> Voeg toe 
+        </button>
+    <form>
+    Projectnaam:<br>
+    <input type="text" name="Projectnaam"><br>
+    Projectinformatie:<br>
+    <input type="text" name="Projectinformatie">
+  </form>
+ 
+</div>
+</div>
+
+
+<a href="#openModal2"><button>verwijder project <span class="glyphicon glyphicon-trash"></span></button></a>
+
+  <div id="openModal2" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Verwijder Project</h2>
+    <button type="button" class="btn btn-primary btn-lg pull-right">
+          <span class="glyphicon glyphicon-trash"></span> Delete 
+        </button>
+            <?php
+            $query = $db->query("SELECT name FROM projects");
+            echo '<select name="Projecten">';
+            while ($row1 = $query->fetch(PDO::FETCH_ASSOC))
+            {
+                echo '<option value="'.$row1['name'].'">'.$row1['name'].'</option>';
+            }
+            echo '</select>';
+            ?> 
+
+        <br>
+        <br>
+</div>
+</div>       
     </div>
 
 
@@ -120,7 +164,57 @@ foreach ($mergedData as $data) {
             <option>
                 Wijzig
             </option>
-        </select>     
+        </select> 
+        <a href="#openModal3"><button>Voeg competentie toe <span class="glyphicon glyphicon-plus"></button></a>
+
+  <div id="openModal3" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Voeg competentie toe</h2>
+    <button type="button" class="btn btn-primary btn-lg pull-right">
+          <span class="glyphicon glyphicon-ok"></span> Voeg toe 
+        </button>
+    <form>
+    Naam competentie:<br>
+    <input type="text" name="Naam competentie"><br>
+  </form>
+  <p>Voeg toe aan Project</p>
+  <?php
+            $query = $db->query("SELECT name FROM projects");
+            echo '<select name="Projecten">';
+            while ($row1 = $query->fetch(PDO::FETCH_ASSOC))
+            {
+                echo '<option value="'.$row1['name'].'">'.$row1['name'].'</option>';
+            }
+            echo '</select>';
+            ?> 
+
+</div>
+</div>
+
+<a href="#openModal4"><button>Verwijder competentie <span class="glyphicon glyphicon-trash"></span></button></a>
+
+  <div id="openModal4" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Verwijder competentie</h2>
+    <button type="button" class="btn btn-primary btn-lg pull-right">
+          <span class="glyphicon glyphicon-trash"></span> Delete 
+        </button>
+            <?php
+            $query = $db->query("SELECT name FROM competencies");
+            echo '<select name="Competenties">';
+            while ($row2 = $query->fetch(PDO::FETCH_ASSOC))
+            {
+                echo '<option value="'.$row2['name'].'">'.$row2['name'].'</option>';
+            }
+            echo '</select>';
+            ?>
+            <br>
+            <br>
+
+</div>
+</div>    
     </div>
 
 
@@ -151,7 +245,45 @@ foreach ($mergedData as $data) {
         <option>
             Wijzig
         </option>
-        </select>   
+        </select> 
+        <a href="#openModal5"><button>Voeg student toe <span class="glyphicon glyphicon-plus"></button></a>
+
+  <div id="openModal5" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Voeg student toe</h2>
+    <button type="button" class="btn btn-primary btn-lg pull-right">
+          <span class="glyphicon glyphicon-ok"></span> Voeg toe 
+        </button>
+    <form>
+    Naam Student:<br>
+    <input type="text" name="Naam student"><br>
+  </form>
+</div>
+</div>
+
+<a href="#openModal6"><button>Verwijder Student <span class="glyphicon glyphicon-trash"></span></button></a>
+
+  <div id="openModal6" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Verwijder Student</h2>
+    <button type="button" class="btn btn-primary btn-lg pull-right">
+          <span class="glyphicon glyphicon-trash" ></span> Delete 
+        </button>
+            <?php
+            $query = $db->query("SELECT name FROM students");
+            echo '<select name="Studenten">';
+            while ($row3 = $query->fetch(PDO::FETCH_ASSOC))
+            {
+                echo '<option value="'.$row3['name'].'">'.$row3['name'].'</option>';
+            }
+            echo '</select>';
+            ?>  
+            <br>
+            <br>
+</div>
+</div>  
     </div>
 </div>
     <script type="text/javascript" src="script.js"></script>
@@ -186,141 +318,12 @@ foreach ($mergedData as $data) {
 
 </div>
  
-<a href="#openModal1">Voeg project toe</a>
-
-<div id="openModal1" class="modalDialog">
-<div>
-
-    <a href="#close" title="Close" class="close">X</a>
-    <h2>Voeg project toe</h2>
-    <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-ok"></span> Voeg toe 
-        </button>
-    <form>
-    Projectnaam:<br>
-    <input type="text" name="Projectnaam"><br>
-    Projectinformatie:<br>
-    <input type="text" name="Projectinformatie">
-  </form>
- 
-</div>
-</div>
 
 
-<a href="#openModal2">verwijder project</a>
-
-  <div id="openModal2" class="modalDialog">
-<div>
-    <a href="#close" title="Close" class="close">X</a>
-    <h2>Verwijder Project</h2>
-    <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-trash"></span> Delete 
-        </button>
-            <?php
-            $query = $db->query("SELECT name FROM projects");
-            echo '<select name="Projecten">';
-            while ($row1 = $query->fetch(PDO::FETCH_ASSOC))
-            {
-                echo '<option value="'.$row1['name'].'">'.$row1['name'].'</option>';
-            }
-            echo '</select>';
-            ?> 
-
-        <br>
-        <br>
-</div>
-</div>
 
 
-<a href="#openModal3">Voeg competentie toe</a>
 
-  <div id="openModal3" class="modalDialog">
-<div>
-    <a href="#close" title="Close" class="close">X</a>
-    <h2>Voeg competentie toe</h2>
-    <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-ok"></span> Voeg toe 
-        </button>
-    <form>
-    Naam competentie:<br>
-    <input type="text" name="Naam competentie"><br>
-  </form>
-  <p>Voeg toe aan Project</p>
-  <?php
-            $query = $db->query("SELECT name FROM projects");
-            echo '<select name="Projecten">';
-            while ($row1 = $query->fetch(PDO::FETCH_ASSOC))
-            {
-                echo '<option value="'.$row1['name'].'">'.$row1['name'].'</option>';
-            }
-            echo '</select>';
-            ?> 
 
-</div>
-</div>
-
-<a href="#openModal4">Verwijder competentie</a>
-
-  <div id="openModal4" class="modalDialog">
-<div>
-    <a href="#close" title="Close" class="close">X</a>
-    <h2>Verwijder competentie</h2>
-    <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-trash"></span> Delete 
-        </button>
-            <?php
-            $query = $db->query("SELECT name FROM competencies");
-            echo '<select name="Competenties">';
-            while ($row2 = $query->fetch(PDO::FETCH_ASSOC))
-            {
-                echo '<option value="'.$row2['name'].'">'.$row2['name'].'</option>';
-            }
-            echo '</select>';
-            ?>
-            <br>
-            <br>
-
-</div>
-</div>
-
-<a href="#openModal5">Voeg student toe</a>
-
-  <div id="openModal5" class="modalDialog">
-<div>
-    <a href="#close" title="Close" class="close">X</a>
-    <h2>Voeg student toe</h2>
-    <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-ok"></span> Voeg toe 
-        </button>
-    <form>
-    Naam Student:<br>
-    <input type="text" name="Naam student"><br>
-  </form>
-</div>
-</div>
-
-<a href="#openModal6">Verwijder Student</a>
-
-  <div id="openModal6" class="modalDialog">
-<div>
-    <a href="#close" title="Close" class="close">X</a>
-    <h2>Verwijder Student</h2>
-    <button type="button" class="btn btn-primary btn-lg pull-right">
-          <span class="glyphicon glyphicon-trash" ></span> Delete 
-        </button>
-            <?php
-            $query = $db->query("SELECT name FROM students");
-            echo '<select name="Studenten">';
-            while ($row3 = $query->fetch(PDO::FETCH_ASSOC))
-            {
-                echo '<option value="'.$row3['name'].'">'.$row3['name'].'</option>';
-            }
-            echo '</select>';
-            ?>  
-            <br>
-            <br>
-</div>
-</div>
 
 
 
