@@ -26,8 +26,7 @@ if(isset($_GET["competenceid"]))
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 
-$db = new PDO('mysql:host=localhost;dbname=4woensdag', 'root', '');
-$mergedData=Filter::getFilteredData($db,$studentId,$projectId,$competenceId)->fetchAll();
+
 
 
 $students = [];
